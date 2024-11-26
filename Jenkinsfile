@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools { 
-        nodejs "node 20"
+        nodejs "node 20.18.0"
     }
     stages {
         stage('Clonar Repositório') {
