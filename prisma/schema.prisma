@@ -1,0 +1,16 @@
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:@localhost:3306/corridas_db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Corrida {
+  id        Int      @id @default(autoincrement())
+  cliente   String
+  motorista String
+  valor     Float
+  data      DateTime @default(now())
+}
